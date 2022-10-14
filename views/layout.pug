@@ -1,7 +1,18 @@
 doctype html
 html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+    head
+        title= title
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        meta(name="description", content="The Best")
+    body
+    nav 
+        a(href="/member" style="font-size: 20px;") Become Member 
+        a(href="/admin" style="font-size: 20px;") Become Admin
+        a(href="/create-message" style="font-size: 20px;") Create A Message
+        a(href="/sign-up" style="font-size: 20px;") Sign up
+        if currentUser
+            a(href="/log-out" style="font-size: 20px;") Log out
+        else 
+            a(href="/log-in" style="font-size: 20px;") Log in
+    #main
+        block content

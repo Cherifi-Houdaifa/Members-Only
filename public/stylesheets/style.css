@@ -1,8 +1,20 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 a {
-  color: #00B7FF;
+    color: #00b7ff;
+}
+nav {
+    height: 70px;
+    background-color: rgb(223, 223, 223);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#main {
+    min-height: calc(100vh - 130px);
+    padding: 30px 60px;
 }
