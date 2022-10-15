@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    h1= title
+    if currentUser
+        form(action="", method="post") 
+            Label(style="font-size: 18px;") Message
+                br
+                Textarea(required maxlength="300" rows="10" cols="50" name="text")
+            br
+            input(type="submit", value="Create Message")
+    else
+        p You need to be A member to post messages

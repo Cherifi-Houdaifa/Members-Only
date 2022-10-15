@@ -2,4 +2,34 @@ extends layout
 
 block content
     h1= title
-    
+    h2= currentUser ? (currentUser.isAdmin ? "Hello Admin" : "Hello Not Admin") : "Hello! You need to log in"
+    h2 Messages
+    ul
+        if currentUser
+            if currentUser.isAdmin
+                each message in messages
+                    li
+                        h3= message.user.username
+                        p= message.text
+                        h4= new Date(message.date).toLocaleString()
+                        a(href=`/delete/${message._id}`) Delete Message
+            else if currentUser.isMember
+                each message in messages
+                    li
+                        h3= message.user.username
+                        p= message.text
+                        h4= new Date(message.date).toLocaleString()
+            else
+                each message in messages
+                    li
+                        h3 anonymous user
+                        p(style="font-size: 18px;")= message.text
+                        h4 no Date
+                        hr
+        else
+            each message in messages
+                li
+                    h3 anonymous user
+                    p(style="font-size: 18px;")= message.text
+                    h4 no Date
+                    hr

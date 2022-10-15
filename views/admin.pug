@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    h1= title
+    if currentUser
+        form(action="", method="post") 
+            Label Admin's Password
+                br
+                input(type="text" name="password" placeholder="password" required) 
+            br
+            input(type="submit", value="Become An Admin")
+    else 
+        h3 You need to log in first

@@ -42,4 +42,7 @@ router.get("/admin", users.getBecomeAdmin);
 // Post Become Admin
 router.post("/admin", users.postBecomeAdmin);
 
+// Get Delete Message
+router.get("/delete/:id", users.getDeleteMessage);
+
 module.exports = router;
