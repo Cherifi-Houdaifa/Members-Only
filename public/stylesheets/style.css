@@ -18,3 +18,6 @@ nav {
     min-height: calc(100vh - 130px);
     padding: 30px 60px;
 }
+input {
+    font-size: 20px;
+}

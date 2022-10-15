@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    h1= title
+    form(action="", method="post")
+        Label username
+            br
+            input(type="text" name="username" placeholder="username" required) 
+        br
+        Label password
+            br
+            input(type="password" name="password" placeholder="password" required)
+        br
+        Label confirm password
+            br
+            input(type="password" name="confirm-password" placeholder="confirm password" required)
+        br
+        input(type="submit", value="Sign Up")

@@ -12,6 +12,7 @@ html
         a(href="/sign-up" style="font-size: 20px;") Sign up
         if currentUser
             a(href="/log-out" style="font-size: 20px;") Log out
+            h1= currentUser.username
         else 
             a(href="/log-in" style="font-size: 20px;") Log in
     #main
